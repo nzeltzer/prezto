@@ -11,3 +11,15 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+export PATH="$PATH:/usr/local/bin/ruby"
+
+export PATH="$PATH:/Users/nzeltzer/.rvm/gems/ruby-2.5.1/bin"
+
+export PATH="$PATH:$HOME/.rvm/bin"
+
+export PATH="$PATH:/Users/nzeltzer/Software/ruby/bin"
+
+source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
