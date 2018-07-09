@@ -17,9 +17,15 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
-export PAGER='less'
+# export EDITOR='nano'
+# export VISUAL='nano'
+# export PAGER='less'
+# export EDITOR="emacsclient -t"                  # $EDITOR opens in terminal
+
+export ALTERNATE_EDITOR=""
+export EDITOR="emacsclient -create-frame --alternate-editor="
+export VISUAL="emacsclient -c -a emacs"         # $VISUAL opens in GUI mode
+alias emacs="emacsclient -create-frame --alternate-editor="
 
 #
 # Language

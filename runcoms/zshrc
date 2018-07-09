@@ -12,6 +12,12 @@ fi
 
 # Customize to your needs...
 
+source ~/.fonts/*.sh
+
+POWERLEVEL9K_MODE='awesome-patched'
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon ssh dir rbenv vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
+
 export PATH="$PATH:/usr/local/bin/ruby"
 
 export PATH="$PATH:/Users/nzeltzer/.rvm/gems/ruby-2.5.1/bin"
