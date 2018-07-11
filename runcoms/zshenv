@@ -5,41 +5,43 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
-# Ensure that a non-login, non-interactive shell has a defined environment.
+## Ensure that a non-login, non-interactive shell has a defined environment.
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-# Elixir Config
+## Elixir Config
 
 export ERL_AFLAGS="-kernel shell_history enabled"
 
-# Open in existing emacs session
+## Open in existing emacs session
 
 alias eclient='emacsclient --alternate-editor="" --no-wait $*' #quotes intentionaly left blan
 
-export GLULXE_APP_NAME='git_mac'
-
-export GIGA_APP_NAME='lumpy-forestgreen-whitebeakeddolphin'
-
-
-# Tell grep to highlight matches
+## Tell grep to highlight matches
 export GREP_OPTIONS='--color=auto'
 
-# Tell ls to be colourful
+## Tell ls to be colourful
 
 export CLICOLOR=1
 
 export LSCOLORS=Exfxcxdxbxegedabagacad
 
-
-# Support 256 colors, even over SSH
+## Support 256 colors, even over SSH
 
 export TERM='xterm-256color'
 
 export LANG=en_US.UTF-8
 
-export HOMEBREW_GITHUB_API_TOKEN="96915bcb573671b49c4ffb1ceb644d9956e3c3fa"
+## Build $PATH
+
+export PATH="$PATH:/usr/local/bin/ruby"
+
+export PATH="$PATH:/Users/nzeltzer/.rvm/gems/ruby-2.5.1/bin"
+
+export PATH="$PATH:$HOME/.rvm/bin"
+
+export PATH="$PATH:/Users/nzeltzer/Software/ruby/bin"
 
 export PATH="$PATH:/usr/local/bin"
 
